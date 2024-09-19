@@ -1,0 +1,17 @@
+.book-ride {
+    padding: 2rem;
+    background-color: #f5f7fa;
+}
+
+.book-ride h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #008080;
+    margin-bottom: 2rem;
+}
+
+.ride-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}

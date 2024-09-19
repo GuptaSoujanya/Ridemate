@@ -1,0 +1,35 @@
+.profile-page {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details {
+    margin-bottom: 2rem;
+    background-color: #f5f7fa;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.profile-details p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.edit-button {
+    padding: 0.75rem 2rem;
+    background-color: #008080;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: #006666;
+}

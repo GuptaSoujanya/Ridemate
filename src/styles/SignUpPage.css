@@ -1,0 +1,65 @@
+.auth-page {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f5f7fa;
+    /* Light background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.auth-toggle {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+}
+
+.auth-toggle button {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.auth-toggle .active {
+    font-weight: bold;
+    border-bottom: 2px solid #008080;
+    /* Highlight the active button */
+    color: #008080;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form input {
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.auth-form input:focus {
+    border-color: #008080;
+    /* Highlight input on focus */
+}
+
+.auth-form button {
+    padding: 0.75rem;
+    background-color: #008080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+    background-color: #006666;
+    /* Darken button on hover */
+}

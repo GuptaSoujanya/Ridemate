@@ -1,0 +1,32 @@
+.ride-listing {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.ride-listing h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.ride-listing p {
+    color: #555;
+    font-size: 1rem;
+}
+
+.book-button {
+    padding: 0.75rem 2rem;
+    background-color: #008080;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+    background-color: #006666;
+}
