@@ -1,24 +1,47 @@
+/* Navbar styling */
+
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 2rem;
+    /* Padding on sides for alignment */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /* Ensure the navbar takes the full width of the page */
+    z-index: 1000;
+    transition: background-color 0.5s;
+    box-sizing: border-box;
+    /* Ensure padding doesn't add to the width */
+}
+
+
+/* Transparent navbar on the Home page */
+
+.navbar.transparent {
+    background-color: transparent;
+    color: white;
+}
+
+
+/* Solid navbar on other pages */
+
+.navbar.solid {
     background-color: #008080;
     color: white;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
 .logo a {
-    color: white;
+    color: inherit;
     text-decoration: none;
+    font-size: 1.5rem;
 }
 
 .nav-links a {
     margin-right: 1.5rem;
-    color: white;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -26,9 +49,17 @@
     text-decoration: underline;
 }
 
+
+/* Highlight the active link */
+
+.active-link {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
 .auth-links a {
     margin-left: 1rem;
-    color: white;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -36,14 +67,10 @@
     text-decoration: underline;
 }
 
-.user-menu {
-    position: relative;
-}
-
 .user-menu button {
     background: none;
     border: none;
-    color: white;
+    color: inherit;
     cursor: pointer;
     font-size: 1rem;
 }
@@ -57,21 +84,15 @@
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.dropdown p {
-    margin-bottom: 0.5rem;
-}
 
-.dropdown button {
-    background-color: #ff5c5c;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
+/* Ensure the main page content doesn't overlap with the navbar */
 
-.dropdown button:hover {
-    background-color: #ff1a1a;
+body,
+.main-content {
+    margin-top: 80px;
+    /* Adjust this value if the navbar height changes */
+    padding: 0 0;
+    box-sizing: border-box;
 }

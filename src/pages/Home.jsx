@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const fetchRides = async () => {
       try {
-        const response = await axios.get('/api/rides');
+        const response = await axios.get('http://localhost:5000/api/rides');
         setRides(response.data);
       } catch (error) {
         console.error('Error fetching rides:', error);
@@ -21,11 +21,17 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h2>Available Rides</h2>
+      <div className="hero-section">
+        <h1>Welcome to RideMate</h1>
+        <p>Your best companion for ride-sharing within your community.</p>
+      </div>
       <div className="ride-listings">
-        {rides.map((ride, index) => (
-          <RideListing ride={ride} key={index} />
-        ))}
+        <h2>Available Rides</h2>
+        <div className="ride-listings-container">
+          {rides.map((ride, index) => (
+            <RideListing ride={ride} key={index} />
+          ))}
+        </div>
       </div>
     </div>
   );

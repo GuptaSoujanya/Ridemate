@@ -1,26 +1,69 @@
+/* General page layout */
+
 .home {
-    padding: 2rem;
-    background-color: #e6f7f8;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
 .hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./chris-liverani-HUJDz6CJEaM-unsplash.jpg');
+    /* Example background image */
+    background-size: cover;
     text-align: center;
+    color: white;
+    padding: 2rem;
+    margin-top: -10vh;
 }
 
 .hero-section h1 {
-    font-size: 3rem;
-    color: #008080;
+    font-size: 4rem;
     margin-bottom: 1rem;
+    animation: fadeIn 2s ease-in;
+    margin-top: -50vh;
 }
 
 .hero-section p {
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
 }
 
 .ride-listings {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    text-align: center;
+}
+
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Slick Carousel Customization */
+
+.slick-slider {
+    margin: 0 auto;
+}
+
+.slick-slide {
+    padding: 0 10px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #008080;
 }

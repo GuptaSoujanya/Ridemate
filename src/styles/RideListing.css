@@ -1,32 +1,39 @@
-.ride-listing {
+/* Ride Card Design */
+
+.ride-card {
     background-color: white;
-    padding: 1.5rem;
-    border-radius: 12px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.ride-listing h3 {
+.ride-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ride-card h3 {
     font-size: 1.5rem;
-    color: #333;
+    margin-bottom: 1rem;
+}
+
+.ride-card p {
+    font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
-.ride-listing p {
-    color: #555;
-    font-size: 1rem;
-}
-
-.book-button {
-    padding: 0.75rem 2rem;
+.ride-card button {
     background-color: #008080;
     color: white;
     border: none;
-    border-radius: 8px;
+    padding: 10px 20px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.book-button:hover {
+.ride-card button:hover {
     background-color: #006666;
 }
