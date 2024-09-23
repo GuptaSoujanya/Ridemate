@@ -1,69 +1,150 @@
-/* General page layout */
+/* Overall Body Styles */
 
-.home {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    background-color: #f0f0f0;
+body {
+    box-sizing: border-box;
+    background-color: #111;
+    font-family: "Poppins", sans-serif;
 }
 
-.hero-section {
+
+/* Hero Background and Overlay for Zoom and Text Animation */
+
+.hero-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./chris-liverani-HUJDz6CJEaM-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.hero-overlay {
     position: relative;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('./chris-liverani-HUJDz6CJEaM-unsplash.jpg');
-    /* Example background image */
-    background-size: cover;
+    height: 100vh;
+    color: white !important;
     text-align: center;
-    color: white;
-    padding: 2rem;
-    margin-top: -10vh;
+    z-index: 1;
 }
 
-.hero-section h1 {
+.hero-overlay h1 {
     font-size: 4rem;
-    margin-bottom: 1rem;
-    animation: fadeIn 2s ease-in;
-    margin-top: -50vh;
+    margin: 0;
+    color: white !important;
 }
 
-.hero-section p {
+.hero-overlay p {
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-top: 10px;
+    opacity: 0.8;
 }
 
-.ride-listings {
+
+/* About Section */
+
+.about-section {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Match the semi-transparent background style */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 4rem;
     text-align: center;
 }
 
+.about-heading {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-align: center;
+    /* Center the heading */
+}
 
-/* Animations */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: -12vh auto;
+    text-align: left;
+    /* Left-align the text */
+}
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+.about-text {
+    flex: 1;
+    padding: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    /* Slight transparency for a subtle look */
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.about-image {
+    flex: 1;
+    padding: 1rem;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Scroll Speed Section */
+
+.speed-section {
+    margin-top: 2rem;
+    color: #fff;
+}
+
+.speed-section h3 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+
+/* Text Fade Animation on Scroll */
+
+.animated-fade-text {
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.hidden-text {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+    .hero-overlay h1 {
+        font-size: 3rem;
     }
-    to {
-        opacity: 1;
+    .hero-overlay p {
+        font-size: 1.2rem;
     }
-}
-
-
-/* Slick Carousel Customization */
-
-.slick-slider {
-    margin: 0 auto;
-}
-
-.slick-slide {
-    padding: 0 10px;
-}
-
-.slick-prev:before,
-.slick-next:before {
-    color: #008080;
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        /* Center text on smaller screens */
+    }
+    .about-text {
+        padding: 1rem;
+    }
+    .about-image {
+        padding: 1rem;
+        margin-top: 1rem;
+    }
 }

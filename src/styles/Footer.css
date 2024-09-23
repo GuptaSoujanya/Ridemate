@@ -1,12 +1,13 @@
 .footer {
-    background-color: #008080;
+    background-color: transparent !important;
+    /* Transparent background */
     color: white;
     text-align: center;
     padding: 1rem 0;
     width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
-    /* Ensure footer stays at the bottom without overlapping content */
+    bottom: 0;
 }
 
 .footer p {
@@ -33,4 +34,14 @@
 
 .footer-links li a:hover {
     color: #66b2b2;
+}
+
+
+/* Ensure the footer sticks to the bottom of the viewport */
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100vh;
 }

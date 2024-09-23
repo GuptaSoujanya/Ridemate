@@ -19,9 +19,13 @@ mongoose.connect(process.env.MONGO_URI, {
     }).then(() => console.log('MongoDB Connected'))
     .catch(err => console.error('MongoDB connection error:', err));
 
-// Routes
+// Existing Routes (Authentication)
 const authRoutes = require('./routes/authRoutes');
-app.use('/api/auth', authRoutes); // IMPORTANT: This must match the API path
+app.use('/api/auth', authRoutes);
+
+// Uber Auth and API Routes
+const uberAuthRoutes = require('./routes/uberRoutes');
+app.use('/api/uber', uberAuthRoutes); // Mount Uber routes at /api/uber
 
 // Start server
 const PORT = process.env.PORT || 5000;
